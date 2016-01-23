@@ -7,7 +7,6 @@ import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.state.IBlockState;
 
 import ministry.minebetter.api.block.IBlock;
-
 import com.google.common.collect.ImmutableSet;
 
 public class BlockStateUtils {
