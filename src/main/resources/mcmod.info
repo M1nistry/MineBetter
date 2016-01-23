@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "minebetter",
+  "name": "MineBetter",
+  "description": "Clustered ore long lasting",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["Ministry"],
+  "credits": "The World",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
