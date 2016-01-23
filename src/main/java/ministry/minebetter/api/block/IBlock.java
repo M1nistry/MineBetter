@@ -11,5 +11,9 @@ import net.minecraft.item.ItemBlock;
 public interface IBlock {
 
     public Class<? extends ItemBlock> getItemClass();
-    public int getItemRenderColor
+    public int getItemRenderColor(IBlockState state, int tintIndex);
+    public IProperty[] getPresetProperties();
+    public IProperty[] getNonRenderingProperties();
+    public String getStateName(IBlockState state);
+
 }

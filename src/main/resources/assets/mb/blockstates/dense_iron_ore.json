@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "normal": { "model": "mb:dense_iron_ore" }
+  }
+}
