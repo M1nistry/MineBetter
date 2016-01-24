@@ -18,22 +18,26 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
  */
 public class BlockEventHandler {
 
-    @SubscribeEvent
-    public void BreakBlock(BlockEvent.BreakEvent e)
-    {
-        if (e.state.getBlock() == blocks.dense_iron)
-        {
-            if (!e.getPlayer().canHarvestBlock(e.state.getBlock()))
-            {
-                System.out.println("We shit");
-                return;
-            }
-            else if (true)
-            {
-                System.out.println("We can harvest");
-                e.world.spawnEntityInWorld(new EntityItem(e.world, e.pos.getX(), e.pos.getY()+1.0f, e.pos.getZ(), new ItemStack(Item.getItemFromBlock(Blocks.iron_ore), 1)));
-                e.setCanceled(true);
-            }
-        }
-    }
+    //@SubscribeEvent
+//    public void BreakBlock(BlockEvent.BreakEvent e)
+//    {
+//        if (e.state.getBlock() == blocks.dense_iron)
+//        {
+//            if (!e.getPlayer().canHarvestBlock(e.state.getBlock()))
+//            {
+//                System.out.println("We shit");
+//                return;
+//            }
+//            else if (true)
+//            {
+////                int yield = ((Integer)e.state.getValue(BlockDenseIron.YIELD)).intValue();
+//
+////                System.out.println("We can harvest " + yield);
+////                e.world.setBlockState(e.pos, e.state.withProperty(BlockDenseIron.YIELD, Integer.valueOf(yield - 1)), 2);
+//                e.world.spawnEntityInWorld(new EntityItem(e.world, e.pos.getX(), e.pos.getY()+1.0f, e.pos.getZ(), new ItemStack(Item.getItemFromBlock(Blocks.iron_ore), 1)));
+////                System.out.println("After yield " + ((Integer)e.state.getValue(BlockDenseIron.YIELD)).intValue());
+//                e.setCanceled(true);
+//            }
+//        }
+//    }
 }

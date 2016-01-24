@@ -1,5 +1,6 @@
 package ministry.minebetter;
 
+import ministry.minebetter.common.block.BlockDenseIron;
 import ministry.minebetter.common.handler.BlockEventHandler;
 import ministry.minebetter.common.init.ModBlocks;
 import ministry.minebetter.proxy.CommonProxy;

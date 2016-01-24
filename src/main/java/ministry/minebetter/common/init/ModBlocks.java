@@ -2,6 +2,7 @@ package ministry.minebetter.common.init;
 
 import static ministry.minebetter.api.block.blocks.*;
 
+import ministry.minebetter.common.meta.block.BlockMeta;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelResourceLocation;
@@ -25,7 +26,7 @@ public final class ModBlocks {
         block.setUnlocalizedName(blockName);
         block.setCreativeTab(tab);
 
-        GameRegistry.registerBlock(block, block.getUnlocalizedName().substring(5));
+        GameRegistry.registerBlock(block, BlockMeta.class, block.getUnlocalizedName().substring(5));
 
         return block;
     }
