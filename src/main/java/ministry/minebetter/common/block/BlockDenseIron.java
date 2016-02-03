@@ -33,8 +33,6 @@ public class BlockDenseIron extends Block implements IMetaBlockName, ITileEntity
         this.setHarvestLevel("pickaxe", 3);
         this.setCreativeTab(CreativeTabs.tabBlock);
         this.drop = Item.getItemFromBlock(Blocks.iron_ore);
-        //this.setDefaultState(this.blockState.getBaseState().withProperty(EXHAUSTED, false));
-        //createTileEntity(null, null);
     }
 
 
@@ -47,35 +45,7 @@ public class BlockDenseIron extends Block implements IMetaBlockName, ITileEntity
     @Override
     public int quantityDropped(IBlockState blockstate, int fortune, Random random)
     {
-        return (Boolean)blockstate.getValue(EXHAUSTED) ? 0 : 1;
-    }
-
-    public void breakBlock(World worldIn, BlockPos pos, IBlockState state)
-    {
-        if (!((Boolean)state.getValue(EXHAUSTED)))
-        {
-            int i = new Random().nextInt(100);
-            System.out.println("RANDOM: " + i);
-            if (i < 10)
-            {
-                worldIn.setBlockState(pos, state.withProperty(EXHAUSTED, true));
-                return;
-            }
-            worldIn.setBlockState(pos, state.withProperty(EXHAUSTED, false));
-
-            TileEntity tileentity = worldIn.getTileEntity(pos);
-
-            if (tileentity instanceof TileEntityYield)
-            {
-                TileEntityYield tileEntityYield = ((TileEntityYield) tileentity);
-                System.out.println("YI " + tileEntityYield.getEntry());
-                tileEntityYield.addEntry(tileEntityYield.getEntry() - 1);
-                worldIn.setTileEntity(pos, tileEntityYield);
-
-            }
-            worldIn.spawnEntityInWorld(new EntityItem(worldIn, pos.getX(), pos.getY() + 1.0f, pos.getZ(), new ItemStack(Item.getItemFromBlock(Blocks.iron_ore), 1)));
-        }
-        super.breakBlock(worldIn, pos, state);
+        return blockstate.getValue(EXHAUSTED) ? 0 : 1;
     }
 
     public TileEntity createNewTileEntity(World worldIn, int meta)
@@ -100,7 +70,7 @@ public class BlockDenseIron extends Block implements IMetaBlockName, ITileEntity
 
     @Override
     public int getMetaFromState(IBlockState state) {
-        return ((Boolean)state.getValue(EXHAUSTED)).booleanValue() ? 1 : 0;
+        return state.getValue(EXHAUSTED).booleanValue() ? 1 : 0;
     }
 
     @Override
