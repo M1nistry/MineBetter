@@ -1,10 +1,7 @@
 {
   "variants": {
     "normal": { "model": "mb:dense_iron_ore" },
-    "exhausted=false,yield=0, ": { "model": "mb:dense_iron_ore" },
-    "exhausted=true,yield=0": { "model": "mb:dense_ore_exhausted" },
-
-    "exhausted=false,yield=1": { "model": "mb:dense_iron_ore" },
-    "exhausted=true,yield=1": { "model": "mb:dense_ore_exhausted"}
+    "exhausted=false": { "model": "mb:dense_iron_ore" },
+    "exhausted=true": { "model": "mb:dense_ore_exhausted" }
   }
 }
