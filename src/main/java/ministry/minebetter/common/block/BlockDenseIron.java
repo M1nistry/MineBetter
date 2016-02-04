@@ -33,6 +33,7 @@ public class BlockDenseIron extends Block implements IMetaBlockName, ITileEntity
         this.setHarvestLevel("pickaxe", 3);
         this.setCreativeTab(CreativeTabs.tabBlock);
         this.drop = Item.getItemFromBlock(Blocks.iron_ore);
+        this.setDefaultState(this.blockState.getBaseState().withProperty(EXHAUSTED, false));
     }
 
 

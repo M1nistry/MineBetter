@@ -5,8 +5,8 @@ import java.util.Random;
 
 public class TileEntityYield extends TileEntity {
 
-    //private int i = new Random().nextInt(500 - 250) + 250;
-    private int i = new Random().nextInt(10);
+    private int i = new Random().nextInt(500 - 250) + 250;
+
     private int yield = i;
 
     public void addEntry(int i)

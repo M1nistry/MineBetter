@@ -4,7 +4,10 @@ import ministry.minebetter.common.block.BlockDenseIron;
 import ministry.minebetter.common.handler.BlockEventHandler;
 import ministry.minebetter.common.init.BlockTileEntities;
 import ministry.minebetter.common.init.ModBlocks;
+import ministry.minebetter.common.init.ModItems;
+import ministry.minebetter.common.util.block.BlockManager;
 import ministry.minebetter.common.util.entity.TileEntityYield;
+import ministry.minebetter.crafting.ModCrafting;
 import ministry.minebetter.proxy.CommonProxy;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.world.BlockEvent;
@@ -27,7 +30,10 @@ public class MineBetter {
     public void preInit(FMLPreInitializationEvent e)
     {
         ModBlocks.init();
+        ModItems.init();
+        ModCrafting.init();
         BlockTileEntities.register();
+        GameRegistry.registerWorldGenerator(new BlockManager(), 3);
     }
     @EventHandler
     public void Init (FMLInitializationEvent e)
