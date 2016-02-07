@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "normal": { "model": "mb:coal_drill" },
+    "facing=east": { "model": "mb:coal_drill" },
+    "facing=west": { "model": "mb:coal_drill" },
+    "facing=south": { "model": "mb:coal_drill" },
+    "facing=north": { "model": "mb:coal_drill" },
+    "inventory": { "model": "mb:coal_drill" }
+  }
+}

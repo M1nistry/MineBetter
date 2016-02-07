@@ -18,6 +18,7 @@ public final class ModBlocks {
     public static void init()
     {
         dense_iron = registerBlock(new BlockDenseIron(), "dense_iron_ore", CreativeTabs.tabBlock);
+        coal_drill = registerBlock(new BlockCoalDrill(false), "coal_drill", CreativeTabs.tabTools);
     }
 
     public static Block registerBlock(Block block, String blockName, CreativeTabs tab)

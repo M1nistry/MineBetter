@@ -10,13 +10,10 @@ import net.minecraft.block.properties.PropertyBool;
 import net.minecraft.block.state.BlockState;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.item.EntityItem;
 import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 
 import java.util.Random;
@@ -27,7 +24,7 @@ public class BlockDenseIron extends Block implements IMetaBlockName, ITileEntity
 
     public BlockDenseIron()
     {
-        super (Material.ground);
+        super (Material.iron);
         this.setUnlocalizedName("dense_iron_ore");
         this.setHardness(3.0f);
         this.setHarvestLevel("pickaxe", 3);
